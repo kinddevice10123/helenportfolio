@@ -49,7 +49,7 @@ function App() {
         <Projects />
         <Experience />
         <Education />
-        <Contact />
+        {/* <Contact /> */}
       </div>
     </ThemeProvider>
   )

@@ -9,9 +9,6 @@ const Hero = () => {
       <div className="container">
         <div className="hero-content">
           <div className="hero-text">
-            <div className="hero-badge">
-              <span>Open to opportunities</span>
-            </div>
             <h1 className="hero-title">
               Hi, I'm <span className="gradient-text">Helen Bond</span>
             </h1>
@@ -49,7 +46,7 @@ const Hero = () => {
             <div className="profile-card">
               <div className="profile-image">
                 <img 
-                  src="https://images.pexels.com/photos/3756681/pexels-photo-3756681.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                  src="/images/profile.jpg" 
                   alt="Helen Bond" 
                 />
               </div>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import ArrowTopRightOnSquareIcon from '@heroicons/react/24/outline/ArrowTopRightOnSquareIcon'
-import CodeBracketIcon from '@heroicons/react/24/outline/CodeBracketIcon'
+// import ArrowTopRightOnSquareIcon from '@heroicons/react/24/outline/ArrowTopRightOnSquareIcon'
+// import CodeBracketIcon from '@heroicons/react/24/outline/CodeBracketIcon'
 import ChevronLeftIcon from '@heroicons/react/24/outline/ChevronLeftIcon'
 import ChevronRightIcon from '@heroicons/react/24/outline/ChevronRightIcon'
 
@@ -10,52 +10,52 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-featured e-commerce platform with React frontend, Node.js backend, and integrated payment processing.',
-      image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600',
-      skills: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      liveUrl: 'https://example.com',
-      codeUrl: 'https://github.com'
+      title: 'Modern Payment Integration System',
+      description: 'Developed a secure and scalable payment system that integrates Stripe API to handle transactions. Includes features like recurring billing, webhook processing, and user-friendly dashboard. Deployed using Docker and CI/CD via GitHub Actions.',
+      image: '/images/portfolio1.png',
+      skills: ['React', 'Node.js','Stripe API', 'MongoDB', 'Docker'],
+      // liveUrl: 'https://example.com',
+      // codeUrl: 'https://github.com'
     },
     {
-      title: 'Task Management App',
-      description: 'A collaborative task management application built with Vue.js and Python Flask with real-time updates.',
-      image: 'https://images.pexels.com/photos/7014966/pexels-photo-7014966.jpeg?auto=compress&cs=tinysrgb&w=600',
+      title: 'A Modern Car Dealership Platform',
+      description: 'This dynamic site allows users to easily search for vehicles, view detailed information, and compare models.',
+      image: '/images/portfolio2.png',
       skills: ['Vue.js', 'Python', 'Flask', 'PostgreSQL'],
-      liveUrl: 'https://example.com',
-      codeUrl: 'https://github.com'
+      // liveUrl: 'https://example.com',
+      // codeUrl: 'https://github.com'
     },
     {
-      title: 'Real Estate Website',
-      description: 'Modern real estate website with property listings, advanced search functionality, and virtual tours.',
-      image: 'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=600',
+      title: 'Explore the World of Smartwatches',
+      description: 'WristWise is a modern web platform dedicated to smartwatches, offering users an engaging space to browse, compare, and discover the latest in wearable tech.',
+      image: '/images/portfolio3.png',
       skills: ['React', 'WordPress', 'REST API', 'CSS3'],
-      liveUrl: 'https://example.com',
-      codeUrl: 'https://github.com'
+      // liveUrl: 'https://example.com',
+      // codeUrl: 'https://github.com'
     },
     {
-      title: 'Healthcare Dashboard',
-      description: 'Comprehensive healthcare management dashboard for medical professionals with patient records.',
-      image: 'https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&w=600',
+      title: 'GlimmerGem – Sparkle Starts Here',
+      description: 'GlimmerGem is a beautifully crafted eCommerce website that offers a luxurious and user-friendly platform to browse and purchase exquisite jewelry pieces.',
+      image: '/images/portfolio4.jpg',
       skills: ['React', 'TypeScript', 'Node.js', 'GraphQL'],
-      liveUrl: 'https://example.com',
-      codeUrl: 'https://github.com'
+      // liveUrl: 'https://example.com',
+      // codeUrl: 'https://github.com'
     },
     {
-      title: 'Restaurant Website',
-      description: 'Complete restaurant solution with menu management, online ordering, and table reservations.',
-      image: 'https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=600',
+      title: 'Blog Shop – eCommerce Shopify Theme',
+      description: 'Blog Shop is a modern and responsive Shopify theme designed for lifestyle bloggers and content creators who want to seamlessly integrate blogging with eCommerce.',
+      image: '/images/portfolio5.png',
       skills: ['Vue.js', 'Node.js', 'MongoDB', 'Stripe'],
-      liveUrl: 'https://example.com',
-      codeUrl: 'https://github.com'
+      // liveUrl: 'https://example.com',
+      // codeUrl: 'https://github.com'
     },
     {
-      title: 'Learning Management System',
-      description: 'Educational platform with course management, student progress tracking, and interactive quizzes.',
-      image: 'https://images.pexels.com/photos/301926/pexels-photo-301926.jpeg?auto=compress&cs=tinysrgb&w=600',
+      title: 'GlowUp – Beauty & Wellness eCommerce Platform',
+      description: 'GlowUp is a comprehensive eCommerce platform designed for the health care, beauty, and wellness industry.',
+      image: '/images/portfolio6.png',
       skills: ['React', 'Python', 'Django', 'PostgreSQL'],
-      liveUrl: 'https://example.com',
-      codeUrl: 'https://github.com'
+      // liveUrl: 'https://example.com',
+      // codeUrl: 'https://github.com'
     }
   ]
 
@@ -92,11 +92,11 @@ const Projects = () => {
     setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides)
   }
 
-  const getCurrentProjects = () => {
-    const start = currentSlide * projectsPerSlide
-    const end = start + projectsPerSlide
-    return projects.slice(start, end)
-  }
+  // const getCurrentProjects = () => {
+  //   const start = currentSlide * projectsPerSlide
+  //   const end = start + projectsPerSlide
+  //   return projects.slice(start, end)
+  // }
 
   return (
     <section id="projects" className={`section ${isVisible ? 'animate-in' : ''}`}>
@@ -134,7 +134,7 @@ const Projects = () => {
                           <div className="project-image">
                             <img src={project.image} alt={project.title} />
                             <div className="project-overlay">
-                              <div className="project-links">
+                              {/* <div className="project-links">
                                 <a 
                                   href={project.liveUrl} 
                                   className="project-link"
@@ -153,7 +153,7 @@ const Projects = () => {
                                 >
                                   <CodeBracketIcon className="link-icon" />
                                 </a>
-                              </div>
+                              </div> */}
                             </div>
                           </div>
                           
